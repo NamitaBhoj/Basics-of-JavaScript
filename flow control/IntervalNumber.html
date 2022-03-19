@@ -1,0 +1,25 @@
+<html>
+<bod>
+    <script>
+
+        let startNumber = parseInt(prompt('Enter lower number: '));
+        let endNumber = parseInt(prompt('Enter lower number: '));
+
+        for (let i = startNumber; i <= endNumber; i++) {
+            let isPrime = 0;
+
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = 1;
+                    break;
+                }
+            }
+
+            if (isPrime == 0 && i > 1) {
+                console.log(i);
+            }
+        }
+    </script>
+</bod>
+
+</html>

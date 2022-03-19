@@ -2,6 +2,7 @@
 
 <body>
     <script>
+        //positive, negetive or zero number checking
         let numberOne = prompt("Enter number that you want to check if its positive or nagetive : ")
 
         if (numberOne > 0) {
@@ -12,12 +13,35 @@
             document.write(numberOne + " is negetive")
         }
 
+        //even odd number checking
         let numberTwo = prompt("Enter number for check if its odd or even : ")
 
         if ((numberTwo / 2) == 0) {
             document.write("<br>" + numberTwo + " is Even")
         } else {
             document.write("<br>" + numberTwo + " is odd")
+        }
+
+        //prime numbers
+        let numberThree = prompt("enter number for checking number is prime or not")
+        let isPrime = true
+
+        if (numberThree == 1) {
+            document.write("1 is neither prime nor composite number.")
+        }
+        else if (numberThree > 1) {
+            for (let number = 2; number < numberThree; number++) {
+                if (numberThree % number == 0) {
+                    isPrime = false
+                    break
+                }
+            }
+            if (isPrime) {
+                document.write("</br>" + numberThree + " is prime")
+            }
+            else {
+                document.write("</br>" + numberThree + " is not prime")
+            }
         }
 
     </script>
